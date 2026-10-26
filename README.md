@@ -85,7 +85,7 @@ group by pizza_category
 from pizza_sales group by pizza_name, pizza_category
 order by Total_revenue desc
 ```
-###by total aquantity
+### by total aquantity
 ```sql
 select Top 5 pizza_name,  sum(quantity) pizza_quantity
 from pizza_sales
