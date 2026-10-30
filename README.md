@@ -1,6 +1,10 @@
 # PIZZA-SALES-SQL-QUERIES
+Pizza King company need a deep analysis for each of their pizza sales, to gain more insights into thir bussiness performance 
 
-# KPI 
+### Tools
+- SQL: Data Analysis
+- Power BI: Creating report and Visiualization
+## KPI 
 - Total Revenue
   ```sql
   select round(sum(total_price),1)  as Total_revenue from pizza_sales
@@ -109,24 +113,8 @@ order by total_order desc
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## NOTE
-If you want to apply the Month, Quarter, Week fliters to the above queries you can use where clause. Follow some of below examples;
+###  NOTE
+If you want to apply the Month, Quarter, Week fliters to the above queries you can use 'Where' clause. Follow some of below examples;
 ```sql
 select  datename(month, order_date) as order_day, count(distinct order_id) as total_orders
 from pizza_sales
@@ -143,5 +131,45 @@ where datename(Quarter, order_date) = 1
 
 * Here Datename(Quarter, Order_date) = 1 indicates that the output is for the Quarter 1
 Month(order_date) = 3 indicates output for quarter 3
+```
+
+
+
+# Dashboaard
+###  Page 1 
+Give a general visual overview analysis, showing the Totals,  percentage and trends overtime
+
+<img width="696" height="385" alt="Screenshot 2026-10-30 135525" src="https://github.com/user-attachments/assets/4fb27af3-f833-4662-959f-e17ea94f25cd" />
+
+- The above reports show July and January has the highest sold pizza, which also shows saturday and sunday to have the highest number of total orders
+
+
+### Page 2
+Using Bar charts, this shows us the comparison between the best performing  and the least popular pizza options
+
+
+<img width="712" height="391" alt="Screenshot 2026-10-30 141906" src="https://github.com/user-attachments/assets/8a078965-b7ef-4f3f-9deb-32fb7422fbf9" />
+
+- The above view show The Thia chicken pizza to be the highest contributor in revenue, although when it comes to the highest Total Order and Quantity, The Calssic Deluxe Chicken takes the lead
+
+
+## Recommendation
+
+-   Having 'The Brie Carre Pizza' to be the least contributor when it comes revenue, order and quantity, there should be a price review which can be tagged as a discount sale for order to increase
+-   Sales reduction can be place at certain hours on Sunday and Monday to increase the total daily orders. This price discounts can be strategically placed around noon, which is around when people are likely to have their lunch breaks or out and about 
+- When it come the the pizza size, a pairing collab can be done for the XX-Large pizza, by initiating that it could come with a free topping or a drink. This will size the percentage order and also the average pizza sold.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
