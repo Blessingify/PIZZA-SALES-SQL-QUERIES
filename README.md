@@ -85,13 +85,18 @@ group by pizza_category
 from pizza_sales group by pizza_name, pizza_category
 order by Total_revenue desc
 ```
-### by total aquantity
+<img width="212" height="118" alt="Screenshot 2026-10-30 134509" src="https://github.com/user-attachments/assets/f929d352-9ddf-473a-9ead-6e432bb8ce20" />
+
+### by total quantity
 ```sql
 select Top 5 pizza_name,  sum(quantity) pizza_quantity
 from pizza_sales
 group by pizza_name
 order by pizza_quantity desc
 ```
+<img width="226" height="107" alt="Screenshot 2026-10-30 134627" src="https://github.com/user-attachments/assets/b5d90cfb-112a-4217-8a10-7498874b69b6" />
+
+
 ### by total order
 ``` sql
 select Top 5 pizza_name,  count(distinct order_id) total_order
@@ -99,6 +104,7 @@ from pizza_sales
 group by pizza_name
 order by total_order desc
 ```
+<img width="215" height="110" alt="Screenshot 2026-10-30 134759" src="https://github.com/user-attachments/assets/c99e8044-c7a0-46f5-95db-9b972994f968" />
 
 
 
